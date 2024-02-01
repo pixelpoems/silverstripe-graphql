@@ -52,7 +52,7 @@ class Controller extends BaseController
         'Max-Age' => 86400, // 86,400 seconds = 1 day.
     ];
 
-    private string $schemaKey;
+    private ?string $schemaKey;
 
     private QueryHandlerInterface $queryHandler;
 
@@ -391,7 +391,7 @@ class Controller extends BaseController
         return $member;
     }
 
-    public function setSchemaKey(string $schemaKey): self
+    public function setSchemaKey(?string $schemaKey): self
     {
         $this->schemaKey = $schemaKey;
         return $this;
